@@ -6,7 +6,7 @@ function App() {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/posts" exact>
+        <Route path="/" exact>
           <MainPage />
         </Route>
         <Route path="/posts/:id">
