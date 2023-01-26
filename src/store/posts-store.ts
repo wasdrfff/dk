@@ -1,6 +1,6 @@
 import axios from "axios";
-import { observable, action, makeAutoObservable } from "mobx";
-import { Post, User } from "./types";
+import { makeAutoObservable } from "mobx";
+import { Post } from "./types";
 
 class PostsStore {
   posts: Post[] = [];
@@ -29,7 +29,7 @@ class PostsStore {
 
     this.setPosts(response.data);
 
-    this.setTotalPage(10); //hardcoded not returned from the api
+    this.setTotalPage(10);
 
     this.currentPage = page;
   }
